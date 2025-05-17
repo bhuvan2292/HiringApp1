@@ -20,7 +20,7 @@ public class CandidateController {
     private CandidateRepo candidateRepo;
 
 
-    @PostMapping
+    @PostMapping(consumes = "application/json")
     public String addCandidate(@RequestBody Candidate candidate) {
         candidateService.saveEntry(candidate);
         return "saved";

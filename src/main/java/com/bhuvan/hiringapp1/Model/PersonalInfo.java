@@ -25,5 +25,6 @@ public class PersonalInfo {
     @JsonBackReference
     private Candidate candidate;
 
+    private String password;
 
 }

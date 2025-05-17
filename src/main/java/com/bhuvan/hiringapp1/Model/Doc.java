@@ -1,5 +1,6 @@
 package com.bhuvan.hiringapp1.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +21,7 @@ public class Doc {
     private String filePath;
 
     @ManyToOne
+    @JsonBackReference
     private Candidate candidate;   // or    private Long candidate_id;
 
 
